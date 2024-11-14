@@ -51,6 +51,9 @@ def login_view(request):
         else:
             messages.error(request, 'Username atau password salah')
     return render(request, 'acc_app/login.html')
+#landingpage view
+def landingpage_view(request):
+    return render(request, 'acc_app/landingpage.html')
 #classes view
 def classes_view(request):
     return render(request, 'acc_app/classes.html')

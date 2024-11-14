@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Styling */
+#pricing {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+/* Ensure all pricing cards have the same height */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Ensures equal height for each column */
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards stretch to the same height */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+    flex-grow: 1; /* Allows the content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body .small {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.card-body .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: auto; /* Adds space between list and button */
+}
+
+.card-body ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-body ul li i {
+    margin-right: 10px;
+    color: #28a745;
+}
+
+.card-body ul li.text-muted i {
+    color: #dc3545;
+}
+
+/* Ensure "Pilih Paket" button stays at the bottom */
+.card-body .d-grid {
+    margin-top: auto; /* Pushes button to the bottom */
+    padding-top: 20px; /* Adds spacing between content and button */
+}
+
+.card-body .d-grid a {
+    display: block;
+    padding: 12px 0;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card-body .d-grid a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .card-body .price {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card-body .price {
+        font-size: 1.8rem;
+    }
+
+    .card-body ul li {
+        font-size: 0.875rem;
+    }
+
+    .card-body .d-grid a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
