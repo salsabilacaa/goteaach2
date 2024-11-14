@@ -51,11 +51,20 @@ def login_view(request):
         else:
             messages.error(request, 'Username atau password salah')
     return render(request, 'acc_app/login.html')
-
+#classes view
+def classes_view(request):
+    return render(request, 'acc_app/classes.html')
+#profile view
+def profile_view(request):
+    return render(request, 'acc_app/profile.html')
+#settings view
+def settings_view(request):
+    return render(request, 'acc_app/settings.html')
+#dashboard view
 @login_required
 def dashboard_view(request):
     return render(request, 'acc_app/dashboard.html')  # Halaman dashboard
 
 def logout_view(request):
     logout(request)
-    return redirect('login')  # Setelah logout, arahkan ke halaman login
+    return redirect('acc_app/login.html')  # Setelah logout, arahkan ke halaman login
